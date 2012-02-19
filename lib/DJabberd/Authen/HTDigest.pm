@@ -2,6 +2,8 @@ package DJabberd::Authen::HTDigest;
 use strict;
 use base 'DJabberd::Authen';
 
+our $VERSION = '0.85';
+
 use DJabberd::Log;
 our $logger = DJabberd::Log->get_logger;
 use Digest::MD5 qw(md5_hex);
