@@ -19,8 +19,8 @@ build-stamp:
 	dh_testdir
 
 # Add commands to compile the package here
-	(cd DJabberd-Authen-HTDigest ; $(PERL) Makefile.PL verbose INSTALLDIRS=vendor )
-	(cd DJabberd-Authen-HTDigest ; $(MAKE) )
+	$(PERL) Makefile.PL verbose INSTALLDIRS=vendor
+	$(MAKE)
 
 # 'make test' does not currently work
 #	$(MAKE) test
@@ -32,7 +32,7 @@ clean:
 	dh_testroot
 
 # Add commands to clean up after the build process here
-	-(cd DJabberd-Authen-HTDigest ; $(MAKE) distclean )
+	-( $(MAKE) distclean )
 
 	dh_clean build-stamp install-stamp
 
@@ -46,7 +46,7 @@ install-stamp:
 	dh_installdirs -A
 
 # Add commands to install the package into $(TMP) here
-	(cd DJabberd-Authen-HTDigest ; $(MAKE) pure_install DESTDIR=$(TMP) PREFIX=/usr )
+	$(MAKE) pure_install DESTDIR=$(TMP) PREFIX=/usr
 
 	find $(TMP) -name .packlist -exec rm '{}' \;
 	find $(TMP) -depth -type d -empty -exec rmdir '{}' \;
