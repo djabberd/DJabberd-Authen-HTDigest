@@ -6,6 +6,8 @@ Build-Depends: debhelper (>= 5)
 Build-Depends-Indep: perl (>= 5.6.10-12), libdjabberd-perl (>= 0.85)
 Standards-Version: 3.8.0
 Homepage: http://danga.com/djabberd
+Vcs-Git: git://github.com/djabberd/DJabberd-Authen-HTDigest.git
+Vcs-Browser: https://github.com/djabberd/DJabberd-Authen-HTDigest
 
 Package: libdjabberd-authen-htdigest-perl
 Section: perl
