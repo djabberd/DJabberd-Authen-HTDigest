@@ -1,0 +1,6 @@
+tmp/
+libdjabberd-authen-htdigest-perl/
+*.debhelper
+*.debhelper.log
+*.substvars
+files
